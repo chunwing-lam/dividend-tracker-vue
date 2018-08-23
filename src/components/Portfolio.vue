@@ -6,7 +6,7 @@
       <div>PurchaseRow</div>
       <div>AdderRow</div>
     </div>
-    <div>ForecastTable</div>
+    <div v-if="forecastTableIsOpen">ForecastTable</div>
   </div>
 </template>
 
@@ -15,7 +15,12 @@ export default {
   name: 'Portfolio',
   data () {
     return {
-
+      forecastTableIsOpen: false,
+      forecast: [],
+      stocks: {},
+      purchases: {
+        purchaseOrder: []
+      }
     }
   }
 }
