@@ -1,10 +1,10 @@
 <template>
-  <form onSubmit={this.handleSubmit}>
+  <form>
     <div class="add-row">
       <div class="stock action">
         <div class="icon">
           <button class="submit icon">
-            <FaPlusSquareO />
+            <icon name="regular/plus-square" />
           </button>
         </div>
       </div>
@@ -36,4 +36,31 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.icon {
+  cursor: pointer;
+}
+button.submit {
+  font-size: 1em;
+  border: 0;
+}
+.add-row {
+  display: -ms-flexbox;
+  display: flex;
+}
+.add-row input[type="text"] {
+  width: 50%;
+}
+.stock.action {
+  font-size: 1.3em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 5%;
+}
+.stock {
+  width: 10%;
+  border: solid 1px white;
+  padding: 0.3em;
+}
 </style>

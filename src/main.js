@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import '../node_modules/vue-awesome/icons/regular/minus-square'
 import '../node_modules/vue-awesome/icons/chart-line'
+import '../node_modules/vue-awesome/icons/regular/plus-square'
 import Icon from '../node_modules/vue-awesome/components/Icon'
 
 Vue.config.productionTip = false

@@ -6,7 +6,7 @@
       <PurchasesRow />
       <AdderRow />
     </div>
-    <div v-if="forecastTableIsOpen">ForecastTable</div>
+    <div v-if="forecastTableIsOpen"><ForecastTable /></div>
   </div>
 </template>
 
@@ -15,12 +15,13 @@ import ResultBox from './ResultBox'
 import HeaderRow from './HeaderRow'
 import PurchasesRow from './PurchasesRow'
 import AdderRow from './AdderRow'
+import ForecastTable from './ForecastTable'
 
 export default {
   name: 'Portfolio',
   data () {
     return {
-      forecastTableIsOpen: false,
+      forecastTableIsOpen: true,
       forecast: [],
       stocks: {},
       purchases: {
@@ -32,7 +33,8 @@ export default {
     ResultBox,
     HeaderRow,
     PurchasesRow,
-    AdderRow
+    AdderRow,
+    ForecastTable
   }
 }
 </script>
