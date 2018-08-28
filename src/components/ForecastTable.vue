@@ -90,6 +90,9 @@ export default {
 .forecast-row {
   display: flex;
 }
+.forecast-row:hover > .forecast {
+  background: #9E9E9E;
+}
 .forecast-row:nth-child(even) {
   background: white;
 }

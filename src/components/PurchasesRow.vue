@@ -32,6 +32,9 @@ export default {
 .icon {
   cursor: pointer;
 }
+.stock-row:hover > .stock {
+  background: #9E9E9E;
+}
 .stock-row:nth-child(odd) {
   background: rgb(218, 222, 226);
 }
