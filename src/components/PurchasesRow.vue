@@ -1,29 +1,38 @@
 <template>
-  <div class="stock-row">
-    <div class="stock action">
-      <div class="icon">
-        <icon name="regular/minus-square" />
+  <div>
+    <div class="stock-row" :key="purchase" v-for="purchase in calculatedPurchases.purchaseOrder">
+      <div class="stock action">
+        <div class="icon">
+          <icon name="regular/minus-square" />
+        </div>
+        <div class="icon">
+          <icon name="chart-line" />
+        </div>
       </div>
-      <div class="icon">
-        <icon name="chart-line" />
-      </div>
+      <div class="stock symbol">{{ purchases[purchase].symbol }}</div>
+      <div class="stock share">{{ purchases[purchase].share }}</div>
+      <div class="stock market-price">32.675</div>
+      <div class="stock market-value">2123.123</div>
+      <div class="stock entry-price">{{ purchases[purchase].entry_price }}</div>
+      <div class="stock entry-value">2304.25</div>
+      <div class="stock weight">7.5</div>
+      <div class="stock gain-loss red">-123</div>
+      <div class="stock dividend-percentage">6.12</div>
+      <div class="stock dividend">130.123123</div>
     </div>
-    <div class="stock symbol">T</div>
-    <div class="stock share">65</div>
-    <div class="stock market-price">32.675</div>
-    <div class="stock market-value">2123.123</div>
-    <div class="stock entry-price">35.45</div>
-    <div class="stock entry-value">2304.25</div>
-    <div class="stock weight">7.5</div>
-    <div class="stock gain-loss red">-123</div>
-    <div class="stock dividend-percentage">6.12</div>
-    <div class="stock dividend">130.123123</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PurchasesRow'
+  name: 'PurchasesRow',
+  props: ['stocks', 'purchases'],
+  computed: {
+    calculatedPurchases: function () {
+      // do calculation logic
+      return this.purchases
+    }
+  }
 }
 </script>
 
